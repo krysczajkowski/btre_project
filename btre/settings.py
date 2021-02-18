@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 # PagesConfig bo tak sie nazywa glowna klasa w pages/apps.py
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'listings.apps.ListingsConfig',
+    'realtors.apps.RealtorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
