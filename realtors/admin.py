@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Realtor
 
-# Register your models here.
+
+# Dodajemy teraz tabele Realtor do panelu admina
+admin.site.register(Realtor)

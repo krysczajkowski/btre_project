@@ -1,0 +1,40 @@
+/* Wiem jak klasy sie nazywaja bo wzielem je z inspect toola */
+#header {
+    height: 50px;
+    background-color: #10284e;
+    color: #fff;
+}
+
+#branding h1 {
+    color: #fff;
+}
+
+a:link,
+a:visited {
+    color: #10284e;
+}
+
+#branding h1, #branding h1 a:link, #branding h1 a:visited{
+    color: #fff!important;
+}
+
+div.breadcrumbs{
+    background-color: #30caa0;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background-color: #30caa0!important;
+    color: #fff!important;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background-color: #10284e;
+    color: #fff;
+}
+
+#nav-sidebar {
+    margin-top: 20px;
+}
+
+.toggle-nav-sidebar {
+    border: 0!important;
+}

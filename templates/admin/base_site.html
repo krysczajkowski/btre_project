@@ -1,0 +1,16 @@
+<!-- Ten plik zmienia wyglad panelu admina -->
+<!-- Zeby dzialal prawdopodobnie musi sie nazywac w taki sposob -->
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+<h1 id='head'>
+    <a href="{% url 'admin:index' %}">
+        <img src="{% static 'img/logo.png' %}" alt="Odbyt Real Estate" class='brand_img' height='50' width='80'> Admin Area
+    </a>
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
