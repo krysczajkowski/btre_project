@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 # Importujemy model listing
 from .models import Listing
 # Importujemy paginatora i jeszcze jakies pierdy 
@@ -25,7 +25,15 @@ def index(request):
 
 
 def listing(request, listing_id):
-    return render(request, 'listings/listing.html')
+    # bierzemy pole id z modelu Listing i przyrownujemy je do listing_id
+    # id=listing_id
+    listing = get_object_or_404(Listing, id=listing_id)
+
+    data = {
+        'listing': listing
+    }
+
+    return render(request, 'listings/listing.html', data)
 
 def search(request):
     return render(request, 'listings/search.html')
