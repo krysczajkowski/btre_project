@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Listing
 # Importujemy paginatora i jeszcze jakies pierdy 
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from .choices import price_choices, bedroom_choices, state_choices
 
 def index(request):
     # Pobieramy wszystkie zmienne/parametry w listing
@@ -36,4 +37,10 @@ def listing(request, listing_id):
     return render(request, 'listings/listing.html', data)
 
 def search(request):
-    return render(request, 'listings/search.html')
+    data = {
+        'state_choices': state_choices,
+        'bedroom_choices': bedroom_choices,
+        'price_choices': price_choices,
+    }
+
+    return render(request, 'listings/search.html', data)
