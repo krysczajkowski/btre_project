@@ -11,6 +11,8 @@
                 <i class="fas fa-sign-in-alt"></i> Login</h4>
             </div>
             <div class="card-body">
+              <!-- Alerts!  -->
+              {% include 'partials/_alerts.html' %}
               <form action="{% url 'login' %}" method='POST'>
                   <!-- Ta pierdolona linijka zapewnia bezpieczenstwo przed csrf :OOOO -->
                   {% csrf_token %}
